@@ -4,9 +4,7 @@ import io.gitlab.arturbosch.detekt.api.AnnotationExcluder
 import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.api.Entity
 import io.gitlab.arturbosch.detekt.api.Issue
-import io.gitlab.arturbosch.detekt.api.Metric
 import io.gitlab.arturbosch.detekt.api.Rule
-import io.gitlab.arturbosch.detekt.api.ThresholdedCodeSmell
 import io.gitlab.arturbosch.detekt.api.UnstableApi
 import io.gitlab.arturbosch.detekt.api.config
 import io.gitlab.arturbosch.detekt.api.configWithFallback
