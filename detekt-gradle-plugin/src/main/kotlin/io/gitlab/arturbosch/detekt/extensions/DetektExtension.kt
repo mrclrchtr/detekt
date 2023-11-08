@@ -86,6 +86,11 @@ open class DetektExtension @Inject constructor(objects: ObjectFactory) : CodeQua
     var autoCorrect: Boolean = DEFAULT_AUTO_CORRECT_VALUE
 
     /**
+     * List of glob patterns for files and directories to be excluded from the analysis.
+     */
+    var excludes: List<String> = defaultExcludes
+
+    /**
      * List of Android build variants for which no detekt task should be created.
      *
      * This is a combination of build types and flavors, such as fooDebug or barRelease.
@@ -123,6 +128,8 @@ open class DetektExtension @Inject constructor(objects: ObjectFactory) : CodeQua
 
         // This flag is ignored unless the compiler plugin is applied to the project
         const val DEFAULT_COMPILER_PLUGIN_ENABLED = true
+
+        internal val defaultExcludes = listOf("build/")
     }
 }
 

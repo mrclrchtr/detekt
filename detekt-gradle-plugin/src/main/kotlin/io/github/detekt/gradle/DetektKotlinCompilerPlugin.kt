@@ -2,7 +2,6 @@ package io.github.detekt.gradle
 
 import io.github.detekt.gradle.extensions.KotlinCompileTaskDetektExtension
 import io.gitlab.arturbosch.detekt.CONFIGURATION_DETEKT_PLUGINS
-import io.gitlab.arturbosch.detekt.DetektPlugin
 import io.gitlab.arturbosch.detekt.DetektPlugin.Companion.CONFIG_DIR_NAME
 import io.gitlab.arturbosch.detekt.DetektPlugin.Companion.CONFIG_FILE
 import io.gitlab.arturbosch.detekt.DetektPlugin.Companion.DETEKT_EXTENSION
@@ -60,7 +59,7 @@ class DetektKotlinCompilerPlugin : KotlinCompilerPluginSupportPlugin {
                 disableDefaultRuleSets.convention(target.provider { extension.disableDefaultRuleSets })
                 parallel.convention(target.provider { extension.parallel })
                 config.from(extension.config)
-                excludes.convention(DetektPlugin.defaultExcludes)
+                excludes.convention(extension.excludes)
             }
         }
     }
